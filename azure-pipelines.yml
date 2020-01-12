@@ -1,0 +1,36 @@
+trigger:
+- master
+- netcore/*
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    projects: 'ExtendedWPFToolkitSolution/MiqM.Xceed.Wpf.Toolkit.NETCore/MiqM.Xceed.Wpf.Toolkit.NETCore.csproj'
+    feedsToUse: 'config'
+    nugetConfigPath: 'ExtendedWPFToolkitSolution/MiqM.Xceed.Wpf.Toolkit.NETCore/nuget.config'
+    verbosityRestore: 'Normal'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: 'ExtendedWPFToolkitSolution/MiqM.Xceed.Wpf.Toolkit.NETCore/MiqM.Xceed.Wpf.Toolkit.NETCore.csproj'
+    arguments: '-c Release'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'pack'
+    packagesToPack: 'ExtendedWPFToolkitSolution/MiqM.Xceed.Wpf.Toolkit.NETCore/MiqM.Xceed.Wpf.Toolkit.NETCore.csproj'
+    configuration: 'Release'
+    packDirectory: '$(Build.ArtifactStagingDirectory)/nuget'
+    nobuild: true
+    versioningScheme: 'off'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/nuget'
+    ArtifactName: 'MiqM.Xceed.Wpf.Toolkit.NETCore'
+    publishLocation: 'Container'

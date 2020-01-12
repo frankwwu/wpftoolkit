@@ -1,6 +1,8 @@
 # Extended WPF Toolkit for .NET Core 3.0
 Package available at [NuGet](https://www.nuget.org/packages/MiqM.Xceed.Wpf.Toolkit.NETCore/)
 
+[![Build Status](https://dev.azure.com/miqm/github/_apis/build/status/miqm.wpftoolkit?branchName=master)](https://dev.azure.com/miqm/github/_build/latest?definitionId=3&branchName=master)
+
 # Changes from original version
 
 This repository provides configuration to build Extended WPF Toolkit™ as **.NET Core App 3.0** libraries

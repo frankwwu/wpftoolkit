@@ -18,6 +18,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xceed.Wpf.AvalonDock.NETCore", "Src\Xceed.Wpf.AvalonDock\Xceed.Wpf.AvalonDock.NETCore.csproj", "{72787B0F-DE53-478F-B0FC-5C6554D486E4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{D52EB995-EFB9-4C08-A9E4-43A12D4404A1}"
+	ProjectSection(SolutionItems) = preProject
+		..\azure-pipelines.yml = ..\azure-pipelines.yml
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiqM.Xceed.Wpf.Toolkit.NETCore", "MiqM.Xceed.Wpf.Toolkit.NETCore\MiqM.Xceed.Wpf.Toolkit.NETCore.csproj", "{22ED52FF-3C34-4F23-82A2-4CA2B53E4EB1}"
 EndProject
