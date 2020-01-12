@@ -1,15 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.SDK">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <UseWPF>true</UseWPF>
-    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <PropertyGroup>
     <PackageId>MiqM.Xceed.Wpf.Toolkit.NETCore</PackageId>
     <Product>MiqM.Xceed.Wpf.Toolkit.NETCore</Product>
-    <Version>3.4.0.3</Version>
+    <Version>3.4.0.4</Version>
     <Authors>MiqM</Authors>
     <Company />
     <PackageLicenseFile>license.md</PackageLicenseFile>

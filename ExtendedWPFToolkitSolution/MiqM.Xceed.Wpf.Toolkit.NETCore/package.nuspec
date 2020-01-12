@@ -14,11 +14,15 @@
     
     <dependencies>
       <group targetFramework=".NETCoreApp3.0">
-        <dependency id="Microsoft.WindowsDesktop.App.Ref" version="3.0.1" exclude="Build,Analyzers" />
         <dependency id="System.Text.Encoding.CodePages" version="4.5.0" exclude="Build,Analyzers" />
         <dependency id="System.Reflection.Emit" version="4.3.0" exclude="Build,Analyzers" />
       </group>
     </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App|WPF"/>
+      </group>
+    </frameworkReferences>
   </metadata>
   <files>
     <file src="$LicenseFilePath$" target="" />
