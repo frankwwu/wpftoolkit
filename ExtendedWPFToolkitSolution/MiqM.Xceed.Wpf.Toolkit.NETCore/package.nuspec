@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <authors>$author$</authors>
+    <projectUrl>$PackageProjectUrl$</projectUrl>
+    <license type="file">$PackageLicenseFile$</license>
+    <description>$Description$</description>
+    <releaseNotes>$PackageReleaseNotes$</releaseNotes>
+    <copyright>$Copyright$</copyright>
+    <tags>$PackageTags$</tags>
+    <repository type="$RepositoryType$" url="$RepositoryUrl$" />
+    
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.0">
+        <dependency id="Microsoft.WindowsDesktop.App.Ref" version="3.0.1" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Encoding.CodePages" version="4.5.0" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection.Emit" version="4.3.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="$LicenseFilePath$" target="" />
+    <file src="bin\$configuration$\netcoreapp3.0\**" target="lib\netcoreapp3.0" exclude="**\MiqM.Xceed.Wpf.Toolkit.NETCore.*" />
+  </files>
+</package>

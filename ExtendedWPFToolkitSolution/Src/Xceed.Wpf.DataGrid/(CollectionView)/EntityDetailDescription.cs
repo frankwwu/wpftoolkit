@@ -13,7 +13,7 @@
    Stay informed: follow @datagrid on Twitter or Like http://facebook.com/datagrids
 
   ***********************************************************************************/
-
+#if !NETCOREAPP
 using System;
 using System.Collections;
 using System.ComponentModel;
@@ -37,7 +37,7 @@ namespace Xceed.Wpf.DataGrid
       this.RelationName = propertyName;
     }
 
-    #region QueryDetails Event
+#region QueryDetails Event
 
     public event EventHandler<QueryEntityDetailsEventArgs> QueryDetails;
 
@@ -50,7 +50,7 @@ namespace Xceed.Wpf.DataGrid
       handler.Invoke( this, e );
     }
 
-    #endregion
+#endregion
 
     protected internal override IEnumerable GetDetailsForParentItem( DataGridCollectionViewBase parentCollectionView, object parentItem )
     {
@@ -105,3 +105,5 @@ namespace Xceed.Wpf.DataGrid
     }
   }
 }
+
+#endif

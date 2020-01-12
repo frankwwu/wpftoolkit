@@ -1,3 +1,26 @@
+# Extended WPF Toolkit for .NET Core 3.0
+Package available at [NuGet](https://www.nuget.org/packages/MiqM.Xceed.Wpf.Toolkit.NETCore/)
+
+# Changes from original version
+
+This repository provides configuration to build Extended WPF Toolkit™ as **.NET Core App 3.0** libraries
+
+Original csproj files were kept. New solution and project files have `.NETCore` suffix.
+
+Necessary modifications are wrapped with `#if` directive to compile only for `NET40` (for parts that should not be used) or `NETCOREAPP` (for parts that must be used)
+
+## Modifications
+
+* Directly referenced `System.Text.Encoding.CodePages` and registration in `RtfFormatter` static constructor.
+* `sn.snk` keys referenced in csproj files
+* In `Xceed.Wpf.Toolkit.LiveExplorer.NETCore` excluded `NorthwindDataService` cs files from compiling
+* This `README.md` file with this message
+* Removed Entity Model references from DataGrid and functionality that used it
+
+## Warning
+
+As the original source code does not provide any tests, packages built are not extensively tested. Use this on your own risk!
+
 # Extended WPF Toolkit™
 
 Extended WPF Toolkit™ by [Xceed](https://xceed.com) is the number one collection of WPF controls, components and utilities for creating next generation Windows applications. Use it to build professional looking, modern, and easy to use WPF applications. It has been downloaded more than 1 million times here, on Codeplex, and on [NuGet](http://www.nuget.org/packages/Extended.Wpf.Toolkit/).

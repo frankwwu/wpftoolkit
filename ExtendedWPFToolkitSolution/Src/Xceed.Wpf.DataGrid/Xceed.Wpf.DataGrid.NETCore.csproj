@@ -1,0 +1,213 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>sn.snk</AssemblyOriginatorKeyFile>
+    <AssemblyName>Xceed.Wpf.DataGrid</AssemblyName>
+    <RootNamespace>Xceed.Wpf.DataGrid</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="DataGridControl.icon.16x16.bmp" />
+    <None Remove="NoDrop.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataGridControl.icon.16x16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xceed.Wpf.Toolkit\Xceed.Wpf.Toolkit.NETCore.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NoDrop.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Column.GenericContentTemplateSelectorResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="DefaultCellEditorSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\aero.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\aero2.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Aero\TableflowView.Aero.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Aero\Resources\Aero.normalcolor.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Aero\Resources\Aero.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Aero\Resources\TableView.Aero.Graphics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Aero\TableView.Aero.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\classic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Classic\TableflowView.Classic.systemcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Classic\Resources\Classic.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Classic\Resources\Classic.systemcolor.Graphics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Classic\Resources\Classic.systemcolor.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Classic\TableView.Classic.systemcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Common\TableflowView.GridElementTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Common\Common.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Common\Graphics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Common\TableView.GridElementTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Controls\TableViewScrollViewer.generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Luna\TableflowView.Luna.homestead.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Luna\TableflowView.Luna.metallic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Luna\TableflowView.Luna.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Royale\TableflowView.Royale.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Windows7\Resources\TableView.Windows7.Graphics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Windows7\Resources\Windows7.Controls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Windows7\Resources\Windows7.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Windows7\TableflowView.Windows7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Windows7\TableView.Windows7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Aero2\Resources\TableView.Aero2.normalcolor.Graphics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Aero2\Resources\Aero2.normalcolor.Controls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Aero2\Resources\Aero2.normalcolor.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Aero2\TableflowView.Aero2.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Aero2\TableView.Aero2.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\zune.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Zune\TableflowView.Zune.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Zune\Resources\Zune.normalcolor.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Zune\Resources\Zune.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Zune\Resources\TableView.Zune.Graphics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Zune\TableView.Zune.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\luna.homestead.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\luna.metallic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\luna.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Luna\Resources\Luna.homestead.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Luna\Resources\Luna.metallic.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Luna\Resources\Luna.normalcolor.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Luna\Resources\Luna.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Luna\Resources\TableView.Luna.Graphics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Luna\TableView.Luna.homestead.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Luna\TableView.Luna.metallic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Luna\TableView.Luna.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\royale.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Royale\Resources\Royale.normalcolor.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Royale\Resources\Royale.Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Royale\Resources\TableView.Royale.Graphics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="themes\Royale\TableView.Royale.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\DataGridControlBackgroundBrushesResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

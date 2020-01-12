@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>MiqM.Xceed.Wpf.Toolkit.NETCore</PackageId>
+    <Product>MiqM.Xceed.Wpf.Toolkit.NETCore</Product>
+    <Version>3.4.0.3</Version>
+    <Authors>MiqM</Authors>
+    <Company />
+    <PackageLicenseFile>license.md</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/miqm/wpftoolkit</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/miqm/wpftoolkit</RepositoryUrl>
+    <Copyright>Copyright © Xceed Software Inc. 2010-2019 and MiqM 2019-2020</Copyright>
+
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Description>Extended WPF Toolkit™ as .NETCoreApp3.0 libraries</Description>
+
+    <PackageTags>Extended WPF Toolkit .NETCore3 dotnetcore</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Extended WPF Toolkit built to use with .NET Core 3.x applications</PackageReleaseNotes>
+    <!--</PropertyGroup>
+  
+  <PropertyGroup>-->
+    <NuspecFile>package.nuspec</NuspecFile>
+    <NuspecProperties>$(NuspecProperties);configuration=$(Configuration)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);version=$(Version)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);id=$(PackageId)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);author=$(Authors)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);PackageLicenseFile=$(PackageLicenseFile)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);PackageProjectUrl=$(PackageProjectUrl)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);Description=$(Description)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);PackageReleaseNotes=$(PackageReleaseNotes)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);Copyright=$(Copyright)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);PackageTags=$(PackageTags)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);RepositoryType=$(RepositoryType)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);RepositoryUrl=$(RepositoryUrl)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);LicenseFilePath=..\..\license.md</NuspecProperties>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\license.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\README.md" Link="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Src\Xceed.Wpf.AvalonDock.Themes.Aero\Xceed.Wpf.AvalonDock.Themes.Aero.NETCore.csproj" PrivateAssets="All">
+      <Private>true</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Src\Xceed.Wpf.AvalonDock.Themes.Metro\Xceed.Wpf.AvalonDock.Themes.Metro.NETCore.csproj" PrivateAssets="All">
+      <Private>true</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Src\Xceed.Wpf.AvalonDock.Themes.VS2010\Xceed.Wpf.AvalonDock.Themes.VS2010.NETCore.csproj" PrivateAssets="All">
+      <Private>true</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Src\Xceed.Wpf.AvalonDock\Xceed.Wpf.AvalonDock.NETCore.csproj" PrivateAssets="All">
+      <Private>true</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Src\Xceed.Wpf.DataGrid\Xceed.Wpf.DataGrid.NETCore.csproj" PrivateAssets="All">
+      <Private>true</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Src\Xceed.Wpf.Toolkit\Xceed.Wpf.Toolkit.NETCore.csproj" PrivateAssets="All">
+      <Private>true</Private>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

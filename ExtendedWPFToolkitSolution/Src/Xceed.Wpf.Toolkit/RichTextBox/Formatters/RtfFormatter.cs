@@ -27,6 +27,14 @@ namespace Xceed.Wpf.Toolkit
   /// </summary>
   public class RtfFormatter : ITextFormatter
   {
+
+#if NETCOREAPP
+    static RtfFormatter()
+    {
+      Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+    }
+#endif
+
     public string GetText( FlowDocument document )
     {
       TextRange tr = new TextRange( document.ContentStart, document.ContentEnd );

@@ -52,8 +52,10 @@ using System.Windows;
 [assembly: AssemblyVersion( "3.4.*" )]
 [assembly: AssemblyFileVersion( "3.4.0.0" )]
 
+#if NET40
 #pragma warning disable 1699
-[assembly: AssemblyDelaySign( false )]
-[assembly: AssemblyKeyFile( @"..\..\..\sn.snk" )]
-[assembly: AssemblyKeyName( "" )]
-#pragma warning restore 1699
+[assembly: AssemblyDelaySign(false)]
+[assembly: AssemblyKeyFile(@"..\..\..\sn.snk")]
+[assembly: AssemblyKeyName("")]
+#pragma warning restore 1699  
+#endif

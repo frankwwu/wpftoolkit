@@ -20,7 +20,9 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
+#if !NETCOREAPP
 using System.Data.Objects.DataClasses;
+#endif
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
@@ -37,13 +39,13 @@ namespace Xceed.Wpf.DataGrid
 {
   internal static class ItemsSourceHelper
   {
-    #region Static Fields
+#region Static Fields
 
     private static readonly Type EntityObjectType = Type.GetType(
       "System.Data.Objects.DataClasses.EntityObject, System.Data.Entity, Version=" + _XceedVersionInfo.FrameworkVersion + ", Culture=neutral, PublicKeyToken=b77a5c561934e089",
       false, false );
 
-    #endregion
+#endregion
 
     internal static bool IsSourceSupportingChangeNotification( object source )
     {
@@ -120,6 +122,7 @@ namespace Xceed.Wpf.DataGrid
           || ( typeof( Guid ) == itemType );
     }
 
+#if !NETCOREAPP
     internal static bool IsEntityObjectLoadable( EntityObject entityObject )
     {
       return ( ( entityObject.EntityState & EntityState.Added ) != EntityState.Added )
@@ -140,6 +143,7 @@ namespace Xceed.Wpf.DataGrid
       return ( source != null )
           && ( ItemsSourceHelper.IsEntityFramework( source.GetType() ) );
     }
+#endif
 
     internal static object GetFirstItemByEnumerable( IEnumerable source )
     {
@@ -1589,8 +1593,10 @@ namespace Xceed.Wpf.DataGrid
       if( itemType.IsInterface )
         return ItemsSourceHelper.CreatePropertyDescriptionsFromInterface( itemType, displayable );
 
+#if !NETCOREAPP
       if( ItemsSourceHelper.IsEntityFramework( itemType ) )
         return ItemsSourceHelper.CreatePropertyDescriptionsFromEntityFramework( itemType, displayable );
+#endif
 
       if( ItemsSourceHelper.IsValueType( itemType ) )
       {
@@ -1657,6 +1663,7 @@ namespace Xceed.Wpf.DataGrid
       return propertyDescriptions;
     }
 
+#if !NETCOREAPP
     private static IEnumerable<PropertyDescriptionRoute> CreatePropertyDescriptionsFromEntityFramework( Type itemType, bool displayable )
     {
       foreach( PropertyDescriptor propertyDescriptor in TypeDescriptor.GetProperties( itemType ) )
@@ -1664,6 +1671,7 @@ namespace Xceed.Wpf.DataGrid
         yield return new PropertyDescriptionRoute( new EntityFrameworkPropertyDescription( propertyDescriptor, displayable ) );
       }
     }
+#endif
 
     private static IEnumerable<PropertyDescriptionRoute> CreatePropertyDescriptionsFromValueType( Type itemType, bool supportsDBNull, DataGridForeignKeyDescription foreignKeyDescription, bool displayable )
     {
@@ -1812,10 +1820,12 @@ namespace Xceed.Wpf.DataGrid
         if( ItemsSourceHelper.IsValueType( itemType ) )
           return new List<DataGridDetailDescription>( 0 );
 
+#if !NETCOREAPP
         //Check if the object is a Entity Framework Entity, before checking for IEnumerable (since Entity Framework does have IEnumerable
         //properties, but require special handling )...
         if( ItemsSourceHelper.IsEntityFramework( itemType ) )
           return ItemsSourceHelper.CreateDetailDescriptionsForEntityFramework( itemType );
+#endif
 
         //If the first item maps to an object that implements IEnumerable, expand that as a Relation ( and only that )...
         if( typeof( IEnumerable ).IsAssignableFrom( itemType ) )
@@ -1863,6 +1873,7 @@ namespace Xceed.Wpf.DataGrid
       return detailDescriptions;
     }
 
+#if !NETCOREAPP
     private static List<DataGridDetailDescription> CreateDetailDescriptionsForEntityFramework( Type type )
     {
       var detailDescriptions = new List<DataGridDetailDescription>();
@@ -1887,6 +1898,7 @@ namespace Xceed.Wpf.DataGrid
 
       return detailDescriptions;
     }
+#endif
 
     private static List<DataGridDetailDescription> CreateDetailDescriptionsForEnumerable()
     {
@@ -1940,7 +1952,7 @@ namespace Xceed.Wpf.DataGrid
           || ( item is DataRow );
     }
 
-    #region DataTablePropertyDescription Private Class
+#region DataTablePropertyDescription Private Class
 
     private sealed class DataTablePropertyDescription : PropertyDescription
     {
@@ -2069,9 +2081,9 @@ namespace Xceed.Wpf.DataGrid
       private readonly DataGridForeignKeyDescription m_foreignKeyDescription;
     }
 
-    #endregion
+#endregion
 
-    #region ItemPropertyPropertyDescription Private Class
+#region ItemPropertyPropertyDescription Private Class
 
     private sealed class ItemPropertyPropertyDescription : PropertyDescription
     {
@@ -2183,9 +2195,9 @@ namespace Xceed.Wpf.DataGrid
       private readonly PropertyDescriptor m_propertyDescriptor;
     }
 
-    #endregion
+#endregion
 
-    #region PropertyDescriptorPropertyDescription Private Class
+#region PropertyDescriptorPropertyDescription Private Class
 
     private class PropertyDescriptorPropertyDescription : PropertyDescription
     {
@@ -2301,9 +2313,9 @@ namespace Xceed.Wpf.DataGrid
       private readonly DataGridForeignKeyDescription m_foreignKeyDescription;
     }
 
-    #endregion
+#endregion
 
-    #region NamedPropertyDescriptorPropertyDescription Private Class
+#region NamedPropertyDescriptorPropertyDescription Private Class
 
     private sealed class NamedPropertyDescriptorPropertyDescription : PropertyDescriptorPropertyDescription
     {
@@ -2342,9 +2354,9 @@ namespace Xceed.Wpf.DataGrid
       private readonly string m_name;
     }
 
-    #endregion
+#endregion
 
-    #region IndexerDescriptorPropertyDescription Private Class
+#region IndexerDescriptorPropertyDescription Private Class
 
     private class IndexerDescriptorPropertyDescription : PropertyDescriptorPropertyDescription
     {
@@ -2372,9 +2384,9 @@ namespace Xceed.Wpf.DataGrid
       }
     }
 
-    #endregion
+#endregion
 
-    #region JaggedArrayPropertyDescription Private Class
+#region JaggedArrayPropertyDescription Private Class
 
     private sealed class JaggedArrayPropertyDescription : PropertyDescription
     {
@@ -2479,10 +2491,11 @@ namespace Xceed.Wpf.DataGrid
       private readonly DataGridForeignKeyDescription m_foreignKeyDescription;
     }
 
-    #endregion
+#endregion
 
-    #region EntityFrameworkPropertyDescription Private Class
+#region EntityFrameworkPropertyDescription Private Class
 
+#if !NETCOREAPP
     private sealed class EntityFrameworkPropertyDescription : PropertyDescription
     {
       internal EntityFrameworkPropertyDescription( PropertyDescriptor propertyDescriptor, bool isDisplayable )
@@ -2607,10 +2620,11 @@ namespace Xceed.Wpf.DataGrid
       private readonly bool m_supportDBNull;
       private readonly bool m_isDisplayable;
     }
+#endif
 
-    #endregion
+#endregion
 
-    #region ValueTypePropertyDescription Private Class
+#region ValueTypePropertyDescription Private Class
 
     private sealed class ValueTypePropertyDescription : PropertyDescription
     {
@@ -2714,6 +2728,6 @@ namespace Xceed.Wpf.DataGrid
       private readonly DataGridForeignKeyDescription m_foreignKeyDescription;
     }
 
-    #endregion
+#endregion
   }
 }

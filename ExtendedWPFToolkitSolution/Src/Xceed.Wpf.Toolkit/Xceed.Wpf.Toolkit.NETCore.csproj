@@ -1,0 +1,388 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>sn.snk</AssemblyOriginatorKeyFile>
+    <AssemblyName>Xceed.Wpf.Toolkit</AssemblyName>
+    <RootNamespace>Xceed.Wpf.Toolkit</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="CollectionControl\Images\Delete16.png" />
+    <None Remove="CollectionControl\Images\Duplicate.png" />
+    <None Remove="MessageBox\Icons\Error48.png" />
+    <None Remove="MessageBox\Icons\Information48.png" />
+    <None Remove="MessageBox\Icons\Question48.png" />
+    <None Remove="MessageBox\Icons\Warning48.png" />
+    <None Remove="MultiLineTextEditor\Images\Notes16.png" />
+    <None Remove="PropertyGrid\Images\AdvancedProperties11.png" />
+    <None Remove="PropertyGrid\Images\Categorize16.png" />
+    <None Remove="PropertyGrid\Images\ClearFilter16.png" />
+    <None Remove="PropertyGrid\Images\Database11.png" />
+    <None Remove="PropertyGrid\Images\Inheritance11.png" />
+    <None Remove="PropertyGrid\Images\Local11.png" />
+    <None Remove="PropertyGrid\Images\Resource11.png" />
+    <None Remove="PropertyGrid\Images\SortAscending16.png" />
+    <None Remove="PropertyGrid\Images\Style11.png" />
+    <None Remove="RichTextBoxFormatBar\Images\Bold16.png" />
+    <None Remove="RichTextBoxFormatBar\Images\Bullets16.png" />
+    <None Remove="RichTextBoxFormatBar\Images\CenterAlign16.png" />
+    <None Remove="RichTextBoxFormatBar\Images\FontColorPicker16.png" />
+    <None Remove="RichTextBoxFormatBar\Images\Italic16.png" />
+    <None Remove="RichTextBoxFormatBar\Images\JustifyAlign16.png" />
+    <None Remove="RichTextBoxFormatBar\Images\LeftAlign16.png" />
+    <None Remove="RichTextBoxFormatBar\Images\Numbering16.png" />
+    <None Remove="RichTextBoxFormatBar\Images\RightAlign16.png" />
+    <None Remove="RichTextBoxFormatBar\Images\TextHighlightColorPicker16.png" />
+    <None Remove="RichTextBoxFormatBar\Images\Underline16.png" />
+    <None Remove="Themes\Generic\Images\close_hover.png" />
+    <None Remove="Themes\Generic\Images\close_inactive.png" />
+    <None Remove="Themes\Generic\Images\close_normal.png" />
+    <None Remove="Themes\Generic\Images\close_pressed.png" />
+    <None Remove="Themes\Generic\Images\close_rounded_hover.png" />
+    <None Remove="Themes\Generic\Images\close_rounded_inactive.png" />
+    <None Remove="Themes\Generic\Images\close_rounded_normal.png" />
+    <None Remove="Themes\Generic\Images\close_rounded_pressed.png" />
+    <None Remove="Themes\Generic\Images\close_toolwindow_hover.png" />
+    <None Remove="Themes\Generic\Images\close_toolwindow_inactive.png" />
+    <None Remove="Themes\Generic\Images\close_toolwindow_normal.png" />
+    <None Remove="Themes\Generic\Images\close_toolwindow_pressed.png" />
+    <None Remove="Themes\Generic\Images\maximize_disabled.png" />
+    <None Remove="Themes\Generic\Images\maximize_hover.png" />
+    <None Remove="Themes\Generic\Images\maximize_inactive.png" />
+    <None Remove="Themes\Generic\Images\maximize_normal.png" />
+    <None Remove="Themes\Generic\Images\maximize_pressed.png" />
+    <None Remove="Themes\Generic\Images\minimize_hover.png" />
+    <None Remove="Themes\Generic\Images\minimize_inactive.png" />
+    <None Remove="Themes\Generic\Images\minimize_normal.png" />
+    <None Remove="Themes\Generic\Images\minimize_pressed.png" />
+    <None Remove="Themes\Generic\Images\resize_grip.png" />
+    <None Remove="Themes\Generic\Images\restore_disabled.png" />
+    <None Remove="Themes\Generic\Images\restore_hover.png" />
+    <None Remove="Themes\Generic\Images\restore_inactive.png" />
+    <None Remove="Themes\Generic\Images\restore_normal.png" />
+    <None Remove="Themes\Generic\Images\restore_pressed.png" />
+    <None Remove="Zoombox\Resources\Zoom.cur" />
+    <None Remove="Zoombox\Resources\ZoomRelative.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CollectionControl\Images\Delete16.png" />
+    <Resource Include="CollectionControl\Images\Duplicate.png" />
+    <Resource Include="MessageBox\Icons\Error48.png" />
+    <Resource Include="MessageBox\Icons\Information48.png" />
+    <Resource Include="MessageBox\Icons\Question48.png" />
+    <Resource Include="MessageBox\Icons\Warning48.png" />
+    <Resource Include="MultiLineTextEditor\Images\Notes16.png" />
+    <Resource Include="PropertyGrid\Images\AdvancedProperties11.png" />
+    <Resource Include="PropertyGrid\Images\Categorize16.png" />
+    <Resource Include="PropertyGrid\Images\ClearFilter16.png" />
+    <Resource Include="PropertyGrid\Images\Database11.png" />
+    <Resource Include="PropertyGrid\Images\Inheritance11.png" />
+    <Resource Include="PropertyGrid\Images\Local11.png" />
+    <Resource Include="PropertyGrid\Images\Resource11.png" />
+    <Resource Include="PropertyGrid\Images\SortAscending16.png" />
+    <Resource Include="PropertyGrid\Images\Style11.png" />
+    <Resource Include="RichTextBoxFormatBar\Images\Bold16.png" />
+    <Resource Include="RichTextBoxFormatBar\Images\Bullets16.png" />
+    <Resource Include="RichTextBoxFormatBar\Images\CenterAlign16.png" />
+    <Resource Include="RichTextBoxFormatBar\Images\FontColorPicker16.png" />
+    <Resource Include="RichTextBoxFormatBar\Images\Italic16.png" />
+    <Resource Include="RichTextBoxFormatBar\Images\JustifyAlign16.png" />
+    <Resource Include="RichTextBoxFormatBar\Images\LeftAlign16.png" />
+    <Resource Include="RichTextBoxFormatBar\Images\Numbering16.png" />
+    <Resource Include="RichTextBoxFormatBar\Images\RightAlign16.png" />
+    <Resource Include="RichTextBoxFormatBar\Images\TextHighlightColorPicker16.png" />
+    <Resource Include="RichTextBoxFormatBar\Images\Underline16.png" />
+    <Resource Include="Themes\Generic\Images\close_hover.png" />
+    <Resource Include="Themes\Generic\Images\close_inactive.png" />
+    <Resource Include="Themes\Generic\Images\close_normal.png" />
+    <Resource Include="Themes\Generic\Images\close_pressed.png" />
+    <Resource Include="Themes\Generic\Images\close_rounded_hover.png" />
+    <Resource Include="Themes\Generic\Images\close_rounded_inactive.png" />
+    <Resource Include="Themes\Generic\Images\close_rounded_normal.png" />
+    <Resource Include="Themes\Generic\Images\close_rounded_pressed.png" />
+    <Resource Include="Themes\Generic\Images\close_toolwindow_hover.png" />
+    <Resource Include="Themes\Generic\Images\close_toolwindow_inactive.png" />
+    <Resource Include="Themes\Generic\Images\close_toolwindow_normal.png" />
+    <Resource Include="Themes\Generic\Images\close_toolwindow_pressed.png" />
+    <Resource Include="Themes\Generic\Images\maximize_disabled.png" />
+    <Resource Include="Themes\Generic\Images\maximize_hover.png" />
+    <Resource Include="Themes\Generic\Images\maximize_inactive.png" />
+    <Resource Include="Themes\Generic\Images\maximize_normal.png" />
+    <Resource Include="Themes\Generic\Images\maximize_pressed.png" />
+    <Resource Include="Themes\Generic\Images\minimize_hover.png" />
+    <Resource Include="Themes\Generic\Images\minimize_inactive.png" />
+    <Resource Include="Themes\Generic\Images\minimize_normal.png" />
+    <Resource Include="Themes\Generic\Images\minimize_pressed.png" />
+    <Resource Include="Themes\Generic\Images\resize_grip.png" />
+    <Resource Include="Themes\Generic\Images\restore_disabled.png" />
+    <Resource Include="Themes\Generic\Images\restore_hover.png" />
+    <Resource Include="Themes\Generic\Images\restore_inactive.png" />
+    <Resource Include="Themes\Generic\Images\restore_normal.png" />
+    <Resource Include="Themes\Generic\Images\restore_pressed.png" />
+    <Resource Include="Zoombox\Resources\Zoom.cur" />
+    <Resource Include="Zoombox\Resources\ZoomRelative.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="BusyIndicator\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="BusyIndicator\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="IconButton\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="IconButton\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="ButtonSpinner\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="ButtonSpinner\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="CalculatorUpDown\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="CalculatorUpDown\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Calculator\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Calculator\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="CheckComboBox\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="CheckListBox\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="CheckListBox\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="ChildWindow\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="ChildWindow\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Chromes\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Chromes\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="CollectionControl\Implementation\CollectionControlDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="CollectionControl\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="CollectionControl\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="ColorCanvas\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="ColorCanvas\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="ColorPicker\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="ColorPicker\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="CheckComboBox\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Primitives\Themes\Aero2\SelectorItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Primitives\Themes\Aero2\WindowControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Primitives\Themes\Generic\SelectorItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Primitives\Themes\Generic\WindowControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="DateTimePicker\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="DateTimePicker\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="DateTimeUpDown\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="DateTimeUpDown\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="DropDownButton\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="DropDownButton\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Magnifier\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="MessageBox\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="MessageBox\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="MultiLineTextEditor\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="MultiLineTextEditor\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="NumericUpDown\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="NumericUpDown\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Pie\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Pie\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="PropertyGrid\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="PropertyGrid\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="RangeSlider\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="RangeSlider\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="RichTextBoxFormatBar\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="RichTextBoxFormatBar\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="SplitButton\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="SplitButton\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Aero.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Aero2\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Aero2\Buttons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Aero2\Common.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Aero2\Glyphs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Aero\Brushes_NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Aero\Buttons_NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\classic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Generic\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Generic\Buttons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Generic\Common.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Generic\Glyphs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\luna.homestead.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\luna.metallic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\luna.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\royale.normalcolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="TimePicker\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="TimePicker\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="TimeSpanUpDown\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="TimeSpanUpDown\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="WatermarkComboBox\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="WatermarkComboBox\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="WatermarkTextBox\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="WatermarkTextBox\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Wizard\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Wizard\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Zoombox\Themes\Aero2.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Zoombox\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>
