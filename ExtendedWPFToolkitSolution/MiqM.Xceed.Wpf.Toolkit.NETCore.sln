@@ -24,8 +24,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{D52EB995
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiqM.Xceed.Wpf.Toolkit.NETCore", "MiqM.Xceed.Wpf.Toolkit.NETCore\MiqM.Xceed.Wpf.Toolkit.NETCore.csproj", "{22ED52FF-3C34-4F23-82A2-4CA2B53E4EB1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xceed.Wpf.DataGrid.NETCore", "Src\Xceed.Wpf.DataGrid\Xceed.Wpf.DataGrid.NETCore.csproj", "{16E6A688-DCEB-4EC1-9097-8681501002B3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,14 +88,6 @@ Global
 		{22ED52FF-3C34-4F23-82A2-4CA2B53E4EB1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{22ED52FF-3C34-4F23-82A2-4CA2B53E4EB1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{22ED52FF-3C34-4F23-82A2-4CA2B53E4EB1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{16E6A688-DCEB-4EC1-9097-8681501002B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16E6A688-DCEB-4EC1-9097-8681501002B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{16E6A688-DCEB-4EC1-9097-8681501002B3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{16E6A688-DCEB-4EC1-9097-8681501002B3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{16E6A688-DCEB-4EC1-9097-8681501002B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{16E6A688-DCEB-4EC1-9097-8681501002B3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{16E6A688-DCEB-4EC1-9097-8681501002B3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{16E6A688-DCEB-4EC1-9097-8681501002B3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

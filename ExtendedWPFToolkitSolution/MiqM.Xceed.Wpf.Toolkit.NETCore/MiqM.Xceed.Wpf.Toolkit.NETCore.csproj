@@ -7,7 +7,7 @@
   <PropertyGroup>
     <PackageId>MiqM.Xceed.Wpf.Toolkit.NETCore</PackageId>
     <Product>MiqM.Xceed.Wpf.Toolkit.NETCore</Product>
-    <Version>3.4.0.4</Version>
+    <Version>3.5.1.2</Version>
     <Authors>MiqM</Authors>
     <Company />
     <PackageLicenseFile>license.md</PackageLicenseFile>
@@ -59,9 +59,6 @@
       <Private>true</Private>
     </ProjectReference>
     <ProjectReference Include="..\Src\Xceed.Wpf.AvalonDock\Xceed.Wpf.AvalonDock.NETCore.csproj" PrivateAssets="All">
-      <Private>true</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\Src\Xceed.Wpf.DataGrid\Xceed.Wpf.DataGrid.NETCore.csproj" PrivateAssets="All">
       <Private>true</Private>
     </ProjectReference>
     <ProjectReference Include="..\Src\Xceed.Wpf.Toolkit\Xceed.Wpf.Toolkit.NETCore.csproj" PrivateAssets="All">

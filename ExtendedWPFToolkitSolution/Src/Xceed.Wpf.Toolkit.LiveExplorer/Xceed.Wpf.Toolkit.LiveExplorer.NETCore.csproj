@@ -233,7 +233,6 @@
     <None Remove="Samples\Chart\Photo\4.bmp" />
     <None Remove="Samples\Chart\Photo\5.bmp" />
     <None Remove="Samples\Chart\Photo\6.bmp" />
-    <None Remove="Samples\DataGrid\OpenSourceImages\DataGrid.png" />
     <None Remove="Samples\DataGrid\OpenSourceImages\MultiColumnsComboBox.png" />
     <None Remove="Samples\FilePicker\OpenSourceImages\FilePicker.png" />
     <None Remove="Samples\Gauge\OpenSourceImages\Gauge.png" />
@@ -329,7 +328,6 @@
     <ProjectReference Include="..\Xceed.Wpf.AvalonDock.Themes.Metro\Xceed.Wpf.AvalonDock.Themes.Metro.NETCore.csproj" />
     <ProjectReference Include="..\Xceed.Wpf.AvalonDock.Themes.VS2010\Xceed.Wpf.AvalonDock.Themes.VS2010.NETCore.csproj" />
     <ProjectReference Include="..\Xceed.Wpf.AvalonDock\Xceed.Wpf.AvalonDock.NETCore.csproj" />
-    <ProjectReference Include="..\Xceed.Wpf.DataGrid\Xceed.Wpf.DataGrid.NETCore.csproj" />
     <ProjectReference Include="..\Xceed.Wpf.Toolkit\Xceed.Wpf.Toolkit.NETCore.csproj" />
   </ItemGroup>
 
