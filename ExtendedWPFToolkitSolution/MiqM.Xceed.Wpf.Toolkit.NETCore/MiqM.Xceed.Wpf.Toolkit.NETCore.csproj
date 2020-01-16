@@ -7,7 +7,7 @@
   <PropertyGroup>
     <PackageId>MiqM.Xceed.Wpf.Toolkit.NETCore</PackageId>
     <Product>MiqM.Xceed.Wpf.Toolkit.NETCore</Product>
-    <Version>3.4.0.4</Version>
+    <Version>3.4.0.5</Version>
     <Authors>MiqM</Authors>
     <Company />
     <PackageLicenseFile>license.md</PackageLicenseFile>
