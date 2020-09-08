@@ -1,3 +1,9 @@
+# Deprecated
+
+This project is no longer maintained.
+
+Please consider switching to more up2date project at https://github.com/dotnetprojects/WpfExtendedToolkit
+
 # Extended WPF Toolkit for .NET Core 3.0
 Package available at [NuGet](https://www.nuget.org/packages/MiqM.Xceed.Wpf.Toolkit.NETCore/)
 
